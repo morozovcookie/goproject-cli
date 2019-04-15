@@ -1,4 +1,4 @@
-GOBUILD_TARGET = goproject-cli
+GOBUILD_TARGET = goproject-cli-bin
 GOFLAGS = CGO_ENABLED=0
 
 .PHONY: gobuild clean

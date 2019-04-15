@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"git.betfavorit.cf/morozov.cookie/goproject-cli/pkg/cmd"
+	"github.com/morozovcookie/goproject-cli/pkg/cmd"
 )
 
 func main() {

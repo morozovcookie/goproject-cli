@@ -3,8 +3,8 @@ package cmd
 import (
 	"github.com/spf13/cobra"
 
-	checkCmd "git.betfavorit.cf/morozov.cookie/goproject-cli/pkg/cmd/check"
-	initCmd "git.betfavorit.cf/morozov.cookie/goproject-cli/pkg/cmd/init"
+	checkCmd "github.com/morozovcookie/goproject-cli/pkg/cmd/check"
+	initCmd "github.com/morozovcookie/goproject-cli/pkg/cmd/init"
 )
 
 func NewDefaultCommand() (command *cobra.Command) {
