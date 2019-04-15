@@ -49,14 +49,7 @@ func (v *Options) Complete(cmd *cobra.Command, args []string) (err error) {
 func (v *Options) Validate() (err error) {
 	_, _ = fmt.Fprintln(os.Stdout, "validating command parameters. . .")
 
-	var (
-		moduleNameRegExp *regexp.Regexp
-	)
-
-	moduleNameRegExp, err = regexp.Compile(`^((?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9])/(\S+)/(\S)$`)
-	if err != nil {
-		return err
-	}
+	moduleNameRegExp := regexp.MustCompile(`^((?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9])/(\S+)/(\S+)$`)
 
 	if !moduleNameRegExp.MatchString(v.moduleName) {
 		return errors.Errorf(`invalid module name "%s"`, v.moduleName)
